@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.mapper.SceneMapper">
+    <select id="getAllScene" resultType="com.example.model.SceneModel">
+        select scene_code             sceneCode,
+               scene_template_num     sceneTemplateNum,
+               usergroup_id           usergroupId,
+               channel_touch_code_set channelTouchCodeSet,
+               create_time            createTime,
+               update_time            updateTime
+        from tb_scene_business
+    </select>
+</mapper>
