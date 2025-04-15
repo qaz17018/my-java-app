@@ -20,14 +20,14 @@ public class MybatisMain {
         try (InputStream inputStream = Resources.getResourceAsStream(resource)) {
 
             System.out.println("ddd");
-//            SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
-//
-//            SqlSession sqlSession = sqlSessionFactory.openSession();
-//            SceneMapper sceneMapper = sqlSession.getMapper(SceneMapper.class);
-//            Collection<SceneModel> allScene = sceneMapper.getAllScene();
-//            for (SceneModel sceneModel : allScene) {
-//                System.out.println(sceneModel);
-//            }
+            SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
+
+            SqlSession sqlSession = sqlSessionFactory.openSession();
+            SceneMapper sceneMapper = sqlSession.getMapper(SceneMapper.class);
+            Collection<SceneModel> allScene = sceneMapper.getAllScene();
+            for (SceneModel sceneModel : allScene) {
+                System.out.println(sceneModel);
+            }
 
 
         }

@@ -1,0 +1,20 @@
+CREATE TABLE `tb_scene_business` (
+  `scene_code` varchar(50) NOT NULL COMMENT '场景编码值',
+  `scene_template_num` text CHARACTER SET utf8mb4 COMMENT '场景ID,多个使用逗号拼接',
+  `business_type_code` varchar(50) DEFAULT NULL COMMENT '业务类型编码',
+  `business_type_level` varchar(50) DEFAULT NULL COMMENT '业务类型级别',
+  `primary_tag_code` varchar(50) DEFAULT NULL COMMENT '一级打标编码',
+  `secondary_tag_code` varchar(50) DEFAULT NULL COMMENT '二级打标编码',
+  `secondary_title_level` varchar(50) DEFAULT NULL COMMENT '二级标题级别',
+  `usergroup_id` varchar(255) DEFAULT NULL COMMENT '用户群ID。多个以英文逗号,间隔',
+  `image_location` varchar(255) DEFAULT NULL COMMENT '图片位置',
+  `channel_touch_code_set` varchar(255) DEFAULT NULL COMMENT '渠道触点编码集合',
+  `status` varchar(20) DEFAULT '30' COMMENT '状态',
+  `is_scene_all_touch_query` varchar(1) DEFAULT '1' COMMENT '场景是否全触点查询。1：是；0：否',
+  `exclusive_scene_id` varchar(255) DEFAULT NULL COMMENT '互斥场景id列表',
+  `order_field` int(10) unsigned DEFAULT NULL COMMENT '排序字段',
+  `creator_id` varchar(50) DEFAULT NULL COMMENT '创建人id',
+  `create_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `update_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+  PRIMARY KEY (`scene_code`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='场景业务表';
